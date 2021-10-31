@@ -1,0 +1,32 @@
+{
+  "livros": [
+    {
+      "id": 2,
+      "titulo": "Gabriel",
+      "isbn": "Rio de Janeiro",
+      "preco": 25.68,
+      "autor": "Zé"
+    },
+    {
+      "id": "3",
+      "titulo": "dfijdfoijoidf",
+      "isbn": "dfdfdfdf",
+      "preco": "269.68",
+      "autor": "xxcxc"
+    },
+    {
+      "id": "4",
+      "titulo": "erererer",
+      "isbn": "trrtrt",
+      "preco": "256.97",
+      "autor": "trrttrtr"
+    },
+    {
+      "id": "125",
+      "titulo": "dfijdfoijoidf",
+      "isbn": "dfdfdfdf",
+      "preco": "269.68",
+      "autor": "zasai"
+    }
+  ]
+}
