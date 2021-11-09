@@ -1,3 +1,4 @@
+
 <template>
   <v-container>
     <v-row class="text-center">
@@ -11,7 +12,7 @@
           dense
           :headers="headers"
           :items="livros"
-          item-key="titulo"
+          item-key="id"
           class="elevation-1"
         >
           <template v-slot:top>
@@ -96,7 +97,7 @@
             <v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
         </template>
         <template v-slot:no-data>
-        <v-btn color="primary" @click="initialize"> Reset </v-btn>
+        <v-btn color="primary" @click="inicializa"> Reset </v-btn>
         </template>
         </v-data-table>
       </v-col>
@@ -111,6 +112,7 @@ export default {
   data() {
     return {
       search: "",
+      dialog: false,
       headers: [
         { text: "#", value: "id" },
         { text: "Titulo", value: "titulo" },
@@ -140,7 +142,8 @@ export default {
   },
   methods: {
     inicializa() {
-      axios("http://localhost:3000/livros")
+      axios
+        .get("http://localhost:3000/livros")
         .then((response) => {
           this.livros = response.data;
         })
@@ -158,7 +161,7 @@ export default {
         //alteracao
         axios
           .put(
-            "http://localhost:3000/livros/" + this.editedIndex, 
+            "http://localhost:3000/livros/" + this.editedItem.id, 
             this.editedItem,
           )
           .then((response) => {

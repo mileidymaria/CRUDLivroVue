@@ -10,9 +10,9 @@
     {
       "id": "3",
       "titulo": "dfijdfoijoidf",
-      "isbn": "dfdfdfdf",
+      "isbn": "dfdfdfdfyuuyghj",
       "preco": "269.68",
-      "autor": "xxcxc"
+      "autor": "zasai"
     },
     {
       "id": "4",
@@ -23,10 +23,17 @@
     },
     {
       "id": "125",
-      "titulo": "dfijdfoijoidf",
-      "isbn": "dfdfdfdf",
-      "preco": "269.68",
+      "titulo": "dfijdfoijoidfhgghuyuyyuuy",
+      "isbn": "dfdfdfdfalterado",
+      "preco": "169.68",
       "autor": "zasai"
+    },
+    {
+      "id": "1",
+      "titulo": "ttrtrtrtr",
+      "isbn": "trtrtrrt",
+      "preco": "14.69",
+      "autor": "rttrrttr"
     }
   ]
 }
