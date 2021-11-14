@@ -2,7 +2,7 @@
   "livros": [
     {
       "id": 2,
-      "titulo": "Gabriel",
+      "titulo": "Gabriel alterado",
       "isbn": "Rio de Janeiro",
       "preco": 25.68,
       "autor": "Zé"
@@ -34,6 +34,22 @@
       "isbn": "trtrtrrt",
       "preco": "14.69",
       "autor": "rttrrttr"
+    }
+  ],
+  "editoras": [
+    {
+      "id": 2,
+      "nome": "Gabriel",
+      "telefone": "Rio de Janeiro",
+      "email": "mileidymaria01@gmail.com",
+      "cnpj": "Zé"
+    },
+    {
+      "id": "1",
+      "nome": "rtr98troijhalterado",
+      "telefone": "dfiudfydfalterado",
+      "email": "0dfidfiodif",
+      "cnpj": "dfuhdifhdfi"
     }
   ]
 }

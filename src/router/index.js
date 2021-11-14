@@ -3,6 +3,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import LivroCrud from '../components/LivroCrud'
+import EditoraCrud from '../components/EditoraCrud'
 
 
 Vue.use(VueRouter)
@@ -15,8 +16,11 @@ const routes = [
   },
   {
     path: '/livros',
-    component: LivroCrud
-    
+    component: LivroCrud 
+  },
+  {
+    path: '/editoras',
+    component: EditoraCrud 
   }
 ]
 
