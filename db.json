@@ -5,35 +5,40 @@
       "titulo": "Gabriel alterado",
       "isbn": "Rio de Janeiro",
       "preco": 25.68,
-      "autor": "Zé"
+      "autor": "Zé",
+      "editora": "1"
     },
     {
       "id": "3",
       "titulo": "dfijdfoijoidf",
       "isbn": "dfdfdfdfyuuyghj",
       "preco": "269.68",
-      "autor": "zasai"
+      "autor": "zasai",
+      "editora": 2
     },
     {
       "id": "4",
       "titulo": "erererer",
       "isbn": "trrtrt",
       "preco": "256.97",
-      "autor": "trrttrtr"
+      "autor": "trrttrtr",
+      "editora": "1"
     },
     {
       "id": "125",
       "titulo": "dfijdfoijoidfhgghuyuyyuuy",
       "isbn": "dfdfdfdfalterado",
       "preco": "169.68",
-      "autor": "zasai"
+      "autor": "zasai",
+      "editora": "1"
     },
     {
       "id": "1",
       "titulo": "ttrtrtrtr",
       "isbn": "trtrtrrt",
       "preco": "14.69",
-      "autor": "rttrrttr"
+      "autor": "rttrrttr",
+      "editora": 2
     }
   ],
   "editoras": [

@@ -40,12 +40,22 @@
                   <v-card-text>
                     <v-container>
                       <v-row>
-                        <v-col cols="12" sm="6" md="8">
+                        <v-col cols="12" sm="6" md="6">
                           <v-text-field
                             v-model="editedItem.titulo"
                             label="Titulo:"
                           ></v-text-field>
                         </v-col>
+                        <v-col cols="12" sm="6" md="2">
+                          <v-select
+                            v-model="editedItem.editora"
+                            :items="editoras"
+                            label="Editora"
+                            item-text="nome"
+                            item-value="id"
+                            return-value
+                          ></v-select>
+                        </v-col>                        
                         <v-col cols="12" sm="6" md="4">
                           <v-text-field
                             v-model="editedItem.preco"
@@ -92,6 +102,9 @@
               </v-dialog>
             </v-toolbar>
           </template>
+        <template v-slot:[`item.editora`]="{ item }">
+          {{nomeEditora(item.editora)}}
+        </template>          
         <template v-slot:[`item.actions`]="{ item }">
             <v-icon small class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
             <v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
@@ -119,15 +132,18 @@ export default {
         { text: "Isbn", value: "isbn" },
         { text: "Preco", value: "preco" },
         { text: "Autor", value: "autor" },
+        { text: "Editora", value: "editora" },
         { text: "Actions", value: "actions", sortable: false },
       ],
 
       livros: [],
+      editoras: [],
       editedIndex: -1,
       editedItem: {
         id: 0,
         titulo: "",
         isbn: "",
+        editora: "",
         preco: 0,
         autor: "",
       },
@@ -135,12 +151,18 @@ export default {
         id: 0,
         titulo: "",
         isbn: "",
+        editora: "",
         preco: 0,
         autor: "",
       },
     };
   },
   methods: {
+    nomeEditora(id) {
+      var nomeEditora = this.editoras.find((x)=> x.id === id);
+      nomeEditora = nomeEditora ? nomeEditora.nome : "Editora inválida!";
+      return nomeEditora;
+    },    
     inicializa() {
       axios
         .get("http://localhost:3000/livros")
@@ -148,6 +170,13 @@ export default {
           this.livros = response.data;
         })
         .catch((error) => console.log(error));
+
+      axios
+        .get("http://localhost:3000/editoras")
+        .then((response) => {
+          this.editoras = response.data;
+        })
+        .catch((error) => console.log(error));        
     },
     close() {
       this.dialog = false;
